@@ -72,7 +72,11 @@ const questionAnswers = [];
 async function promptManagerQuestions() {
     try {
         const answers = await inquirer.prompt(managerQuestions);
-        questionAnswers.push(new Manager(answers.employeeName, answers.managerId, answers.employeeEmail, answers.managerOffice));
+        questionAnswers.push(new Manager(
+            answers.employeeName, 
+            answers.managerId, 
+            answers.employeeEmail, 
+            answers.managerOffice));
     } catch (error) {
         console.log(error);
     }
