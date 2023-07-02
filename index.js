@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHTML = require('./src/generateHTML');
+const createHTML = require('./src/createHTML');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -111,7 +111,7 @@ async function init() {
             contAsking = false;
         }
     }
-    const HTMLContent = generateHTML(questionAnswers);
+    const HTMLContent = createHTML(questionAnswers);
     writeToFile('./dist/index.html', HTMLContent);
 
     function writeToFile(fileName, data) {
@@ -122,5 +122,4 @@ async function init() {
     
 };
 
-// Function call to initialize app
 init();
