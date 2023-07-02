@@ -42,7 +42,7 @@ function generateCards(data) {
     return cardsInfo;
 }
 
-function generateHTML(data){
+function createHTML(data){
 
     return`
         <!DOCTYPE html>
@@ -64,5 +64,5 @@ function generateHTML(data){
     `;
 }
 
-module.exports = generateHTML;
+module.exports = createHTML;
 
